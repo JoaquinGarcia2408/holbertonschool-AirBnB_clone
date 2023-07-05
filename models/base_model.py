@@ -4,7 +4,7 @@
 """
 
 from uuid import uuid4
-import datetime
+from datetime import datetime
 
 
 class BaseModel:
@@ -16,22 +16,21 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         if kwargs:
-            for key, value in kwargs.items():
-                if key in self.__dict__:
-                    if key == "__class__":
-                        pass
-                    if key == "created_at" or key == "updated_at":
-                        self.__dict__[key] = value.fromisoformat()
-                    else:
-                        self.__dict__[key] = value
-
-        self.id = str(uuid4())
-        self.created_at = datetime.datetime.now()
-        self.updated_at = datetime.datetime.now()
+            for key, value in kwargs.items():    
+                if key == "__class__":
+                    pass
+                if key == "created_at" or key == "updated_at":
+                    self.__dict__[key] = datetime.fromisoformat(value)
+                else:
+                    self.__dict__[key] = value
+        else:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
         
     def save(self):
         """ save """
-        self.updated_at = datetime.datetime.now()
+        self.updated_at = datetime.now()
 
     def __str__(self):
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
