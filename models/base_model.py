@@ -9,10 +9,10 @@ import datetime
 
 class BaseModel:
     """sumary_line
-    Keyword arguments:
-    argument -- description
-    Return: return_description
-    """
+       Keyword arguments:
+       argument -- description
+       Return: return_description
+       """
 
     def __init__(self, *args, **kwargs):
         if kwargs:
@@ -25,11 +25,10 @@ class BaseModel:
                     else:
                         self.__dict__[key] = value
 
-        #self.my_number = 0
-        #self.name = "undefined"
         self.id = str(uuid4())
         self.created_at = datetime.datetime.now()
         self.updated_at = datetime.datetime.now()
+        
 
     def __str__(self):
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
@@ -46,11 +45,3 @@ class BaseModel:
             if key == "created_at" or key == "updated_at":
                 dictionary[key] = value.isoformat()
         return dictionary
-
-    def my_number(self, number):
-        """ return a number"""
-        return number
-
-    def name(self, name):
-        """ return name for the person"""
-        return name
