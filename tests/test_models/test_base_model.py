@@ -92,10 +92,10 @@ class TestBaseModel_instantiation(unittest.TestCase):
         dt = datetime.now()
         dt_iso = dt.isoformat()
         b = BaseModel(id="11111", created_at=dt_iso, updated_at=dt_iso)
-        self.assertNotEqual(b.id, "11111")
-        self.assertNotEqual(b.created_at, dt)
-        self.assertNotEqual(b.updated_at, dt)
-        self.assertNotEqual(b.created_at, b.updated_at)
+        self.assertEqual(b.id, "11111")
+        self.assertEqual(b.created_at, dt)
+        self.assertEqual(b.updated_at, dt)
+        self.assertEqual(b.created_at, b.updated_at)
 
 
 class TestBaseModel_to_dict(unittest.TestCase):
