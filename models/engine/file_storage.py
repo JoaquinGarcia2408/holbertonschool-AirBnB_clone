@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 """
-sumary_line
-
-Keyword arguments:
-argument -- description
-Return: return_description
+clase para almacenar todo
 """
 from json import dump, load, loads
 import os.path
@@ -45,3 +41,5 @@ class FileStorage:
                     a = value["__class__"]
                     instancia_objeto = eval(a + '(**value)')
                     self.__objects[key] = instancia_objeto
+        else:
+            pass
