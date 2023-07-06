@@ -11,13 +11,19 @@ import os.path
 
 
 class FileStorage:
+    """ clase para guardar los objetos
+    de python en formato json en un archivo.
+    esta clase tambien ofrece metodos
+    para convertir json en instancias de clase"""
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
+        """ return self.__objects"""
         return self.__objects
 
     def new(self, obj):
+        """ agrega un nuevo key/value a __objects"""
         FileStorage.__objects[obj.__class__.__name__ + "." + obj.id] = obj
 
     def save(self):
