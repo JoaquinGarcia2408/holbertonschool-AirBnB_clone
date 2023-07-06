@@ -9,10 +9,8 @@ from models import storage
 
 
 class BaseModel:
-    """sumary_line
-       Keyword arguments:
-       argument -- description
-       Return: return_description
+    """clase padre de todas las clases
+    de la aplicacion
        """
 
     def __init__(self, *args, **kwargs):

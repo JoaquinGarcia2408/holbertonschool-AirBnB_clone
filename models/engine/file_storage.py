@@ -43,5 +43,5 @@ class FileStorage:
                 diccionario = load(fle)
                 for key, value in diccionario.items():
                     a = value["__class__"]
-                    instancia_objeto = BaseModel(**value)
+                    instancia_objeto = eval(a + '(**value)')
                     self.__objects[key] = instancia_objeto
