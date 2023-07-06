@@ -5,6 +5,10 @@ import cmd
 class HBNBCommand(cmd.Cmd):
     """Simple command processor example."""
 
+    def emptyline(self):
+        """Ignores empty prompts"""
+        pass
+
     def do_EOF(self, line):
         """exit the program"""
         return True
