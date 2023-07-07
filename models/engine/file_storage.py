@@ -34,6 +34,7 @@ class FileStorage:
     def reload(self):
         """ reload from file.json"""
         from models.base_model import BaseModel
+        from models.user import User
         if os.path.exists(self.__file_path):
             with open(FileStorage.__file_path, "r") as fle:
                 diccionario = load(fle)
