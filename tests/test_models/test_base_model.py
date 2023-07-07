@@ -7,8 +7,8 @@ a la clase base/
 
 
 import unittest
+from AirBnB_clone import models
 from models.base_model import BaseModel
-import models
 from datetime import datetime
 from time import sleep
 import os
@@ -48,8 +48,8 @@ class TestBaseModel_instantiation(unittest.TestCase):
     def test_no_args(self):
         self.assertEqual(BaseModel, type(BaseModel()))
 
-    #def test_new_instance_stored(self):
-    #   self.assertIn(BaseModel(), models.storage.all().values())
+    def test_new_instance_stored(self):
+       self.assertIn(BaseModel(), models.storage.all().values())
 
     def test_id(self):
         self.assertEqual(str, type(BaseModel().id))

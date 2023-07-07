@@ -10,7 +10,3 @@ class User(BaseModel):
     """objeto para crear la clase
     user
     """
-    email = ""
-    password = ""
-    first_name = ""
-    last_name = ""
