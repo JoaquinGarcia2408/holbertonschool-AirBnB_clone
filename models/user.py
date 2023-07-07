@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""  nueva clase user
+"""
+Keyword arguments:
+argument -- description
+Return: return_description
 """
 
-
-from .base_model import BaseModel
+from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """objeto para crear la clase
-    user
-    """
+    "Inherits from BAseModel"""
     email = ""
     password = ""
     first_name = ""
