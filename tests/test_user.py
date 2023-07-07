@@ -36,8 +36,18 @@ class TestUser(unittest.TestCase):
     def test_atributos(self):
         usuario = User()
         self.assertIn("id", usuario.to_dict())
+        usuario.email = "martin@gmail.com"
+        usuario.password = "root"
+        usuario.first_name = "martin"
+        usuario.last_name = "Elias"
+        self.assertIn("email", usuario.__dict__)
         self.assertIn("email", usuario.to_dict())
-
-
-
+        self.assertIn("password", usuario.to_dict())
+        self.assertIn("password", usuario.__dict__)
+        self.assertIn("first_name", usuario.to_dict())
+        self.assertIn("first_name", usuario.__dict__)
+        self.assertIn("last_name", usuario.to_dict())
+        self.assertIn("last_name", usuario.__dict__)
+        self.assertIn("id", usuario.to_dict())
+        self.assertIn("id", usuario.__dict__)
         
