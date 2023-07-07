@@ -8,32 +8,38 @@ import unittest
 from models.user import User
 from models.base_model import BaseModel
 
+
 class TestUser(unittest.TestCase):
     """tests for class user
     """
     def test_id(self):
+        """ ahora si"""
         usuario = User()
         usuario2 = User()
         self.assertNotEqual(usuario, usuario2)
-        self.assertEqual(usuario2==usuario, False)
+        self.assertEqual(usuario2 == usuario, False)
         self.assertEqual(usuario is usuario2, False)
-    
+
     def test_todict(self):
+        """ahora si"""
         usuario = User()
         usuario_dict = usuario.to_dict()
         usuario1 = User(usuario_dict)
-        self.assertEqual(usuario==usuario1, False)
+        self.assertEqual(usuario == usuario1, False)
         self.assertEqual(usuario is usuario1, False)
 
     def test_instance(self):
+        """ahora si"""
         usuario = User()
         self.assertIsInstance(usuario, User)
 
     def test_inheritance(self):
+        """is sub clas"""
         usuario = User()
         self.assertTrue(issubclass(User, BaseModel))
 
     def test_atributos(self):
+        """ test attr"""
         usuario = User()
         self.assertIn("id", usuario.to_dict())
         usuario.email = "martin@gmail.com"
@@ -50,4 +56,3 @@ class TestUser(unittest.TestCase):
         self.assertIn("last_name", usuario.__dict__)
         self.assertIn("id", usuario.to_dict())
         self.assertIn("id", usuario.__dict__)
-        
