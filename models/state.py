@@ -1,18 +1,16 @@
 #!/usr/bin/python3
-"""This module defines
-    a class User
+"""
+    This module defines
+    a class State
     to manipulate instances
     and create and destroy
     """
 from models.base_model import BaseModel
 
 
-class User(BaseModel):
+class State(BaseModel):
     """
-    This class defines a user
+    This class defines a State
         by various attributes
         """
-    email = ''
-    password = ''
-    first_name = ''
-    last_name = ''
+    name = ""
