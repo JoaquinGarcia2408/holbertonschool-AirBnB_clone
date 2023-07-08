@@ -52,7 +52,7 @@
   </ul>
   <h3>Usage/Examples</h3>
   <p align= "justify">That is how the console works in interactive mode:
-  Input
+
 
 ```ruby
 $ ./console.py
@@ -67,6 +67,28 @@ EOF  help  quit
 (hbnb) quit
 $
 ```
+<p align= "justify">And in non-interactive mode:
+
+
+$ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
 </details>
 
 <details>
