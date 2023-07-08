@@ -70,6 +70,7 @@ $
 <p align= "justify">And in non-interactive mode:
 
 
+```ruby
 $ echo "help" | ./console.py
 (hbnb)
 
@@ -89,6 +90,7 @@ Documented commands (type help <topic>):
 EOF  help  quit
 (hbnb) 
 $
+```
 </details>
 
 <details>
