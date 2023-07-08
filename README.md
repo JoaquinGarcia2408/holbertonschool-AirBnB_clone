@@ -51,6 +51,22 @@
     <li>quit and EOF: Exit to the program</li>
   </ul>
   <h3>Usage/Examples</h3>
+  <p align= "justify">That is how the console works in interactive mode:
+  Input
+
+```ruby
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb) 
+(hbnb) 
+(hbnb) quit
+$
+```
 </details>
 
 <details>
