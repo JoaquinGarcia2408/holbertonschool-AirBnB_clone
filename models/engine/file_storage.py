@@ -35,6 +35,11 @@ class FileStorage:
         """ reload from file.json"""
         from models.base_model import BaseModel
         from models.user import User
+        from models.state import State
+        from models.amenity import Amenity
+        from models.review import Review
+        from models.place import Place
+        from models.city import City
         if os.path.exists(self.__file_path):
             with open(FileStorage.__file_path, "r") as fle:
                 diccionario = load(fle)

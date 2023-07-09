@@ -4,10 +4,14 @@ Console for the project
 """
 import cmd
 import sys
-import os
 import shlex
 from models.base_model import BaseModel
 from models.user import User
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
 from models import storage
 from models.engine.file_storage import FileStorage
 
@@ -17,7 +21,9 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = '(hbnb) '
     file = None
-    classes = {'BaseModel': BaseModel, 'User': User}
+    classes = {'BaseModel': BaseModel,
+               'User': User, 'City': City, 'Amenity': Amenity,
+               'Review': Review, 'Place': Place, 'State': State}
 
     def emptyline(self):
         """nothing when empty argument and enter"""

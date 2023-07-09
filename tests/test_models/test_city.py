@@ -5,6 +5,7 @@ import unittest
 from models.city import City
 import models
 
+
 class City_TestCase(unittest.TestCase):
     """testing for the class AMenity"""
 

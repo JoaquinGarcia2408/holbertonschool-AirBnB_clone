@@ -5,6 +5,7 @@ import unittest
 from models.amenity import Amenity
 import models
 
+
 class Amenity_TestCase(unittest.TestCase):
     """testing for the class AMenity"""
 

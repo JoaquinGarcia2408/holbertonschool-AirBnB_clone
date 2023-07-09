@@ -5,6 +5,7 @@ import unittest
 from models.place import Place
 import models
 
+
 class Place_TestCase(unittest.TestCase):
     """testing for the class AMenity"""
 
@@ -46,7 +47,6 @@ class Place_TestCase(unittest.TestCase):
         self.assertEqual(b.latitude, 1.3)
         self.assertEqual(b.longitude, 1.1)
         self.assertEqual(b.amenity_ids, ["12", "12"])
-
 
     def test_instan(self):
         a = Place()

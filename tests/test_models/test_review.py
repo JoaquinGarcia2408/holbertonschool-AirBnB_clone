@@ -23,13 +23,13 @@ class TestReview(unittest.TestCase):
         self.assertEqual(a.place_id, "martinasfadfadfadfav4357657")
         self.assertEqual(a.user_id, "42536tegdrfg53e6tgq35q4")
         self.assertEqual(a.text, "how are you?")
-     
+
     def test_attr(self):
         a = Review()
         self.assertNotIn("place_id", a.__dict__)
-        self.assertNotIn("user_id", a.__dict__) 
+        self.assertNotIn("user_id", a.__dict__)
         self.assertNotIn("text", a.__dict__)
-    
+
     def test_instance(self):
         a = Review()
         self.assertIsInstance(a, type(Review()))

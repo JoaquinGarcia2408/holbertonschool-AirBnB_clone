@@ -3,9 +3,9 @@
 """ Basic testing"""
 
 import unittest
-
 from models.state import State
 import models
+
 
 class State_TestCase(unittest.TestCase):
     """testing for the class State"""
